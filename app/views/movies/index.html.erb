@@ -17,6 +17,7 @@
   <tbody>
     <% @movies.each do |movie| %>
       <tr>
+        <td><%= image_tag movie.image.url(:medium) %></td>
         <td><%= movie.title %></td>
         <td><%= movie.bro_score %></td>
         <td><%= movie.actors %></td>
