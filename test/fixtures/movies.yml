@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  bro_score: 1
+  actors: MyString
+  director: MyString
+  description: MyText
+
+two:
+  title: MyString
+  bro_score: 1
+  actors: MyString
+  director: MyString
+  description: MyText
