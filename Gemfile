@@ -46,5 +46,10 @@ group :development, :test do
 
   gem 'paperclip', '~> 4.2.1'
 
+  gem 'bootstrap-sass', '~> 3.3.4.1'
+
+
+
+
 
 end
