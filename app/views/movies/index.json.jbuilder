@@ -1,4 +1,4 @@
-json.array!(@movies) do |movie|
-  json.extract! movie, :id, :title, :bro_score, :actors, :director, :description
-  json.url movie_url(movie, format: :json)
+json.array!(@reviews) do |review|
+  json.extract! review, :id, :rating, :comment
+  json.url review_url(review, format: :json)
 end
