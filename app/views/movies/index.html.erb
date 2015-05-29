@@ -6,9 +6,11 @@
 </div>
 <% end %>
 <div class="row">
-  <% @movies.each do |movie| %>
+  <% @movies.each do |movie, title, year| %>
     <div class="col-sm-6 col-md-3">
       <div class="thumbnail">
+        <strong><%=movie.title%></strong> [<%=movie.bro_score%>]
+
         <%= link_to (image_tag movie.image.url(:medium), class: 'image'), movie %>
       </div>
     </div>

@@ -6,7 +6,7 @@ class MoviesController < ApplicationController
     if params[:search].present?
       @movies= Movie.search(params[:search])
     else
-      @movies= Movie.all?
+      @movies= Movie.all
     end
   end
 

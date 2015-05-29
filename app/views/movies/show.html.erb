@@ -1,8 +1,8 @@
 <div class= "panel panel-default">
   <div class="panel-body">
 
-    <div class="star-rating" data-score= <%= @avg_review %></div>
-    <em><%= "#{@reviews.length} reviews" %></em>
+    <div class="star-rating"  data-score= <%= @avg_review %> <div> </div> </div>
+    <p><%= "#{@reviews.length} reviews" %><em> (avg score)</em></p>
 
     <div class="row">
       <div class="col-md-4">
@@ -17,7 +17,7 @@
                 <td> <%= @movie.title %> </td>
               </tr>
                 <tr>
-                <td> <strong>Bro Score:</strong>
+                <td> <strong>Year:</strong>
                 <td> <%= @movie.bro_score %> </td>
               </tr>
               <tr>
@@ -28,14 +28,15 @@
                 <td> <strong>Director:</strong> </td>
                 <td> <%= @movie.director %> </td>
               </tr>
-              <tr>
+              <!-- <tr>
                 <td> <strong>Description:</strong> </td>
                 <td> <%= @movie.description %> </td>
-              </tr>
+              </tr> -->
             </tbody>
           </table>
-          <%= link_to "Hey you.. write a Review!", new_movie_review_path(@movie) %>
+          <%= link_to "Write a Review!", new_movie_review_path(@movie) %>
         </div>
+
       </div>
        <div class="col-md-7 col-md-offset-1">
          <h1 class="review_title"> <%= @movie.title %> </h1>
@@ -47,8 +48,10 @@
            <% else %>
            <% @reviews.each do |review| %>
              <div class="reviews">
-               <div class="star-rating" data-score= <%=review.rating %> </div>
+               by <%= review.user.email %>
+               <div class="star-rating" data-score= <%=review.rating %></div>
                <p> <%= review.comment %> </p>
+
              </div>
              <% end %>
              <% end %>
@@ -58,8 +61,8 @@
 </div>
 
 
-<%= link_to 'Edit', edit_movie_path(@movie) %> |
-<%= link_to 'Back', movies_path %>
+<%= link_to 'Edit Movie', edit_movie_path(@movie) %> |
+<%= link_to 'Back to Movies', movies_path %>
 
 <script>
 
@@ -69,7 +72,7 @@ $('.star-rating').raty({
   readOnly: true,
   score: function() {
     return $(this).attr('data-score');
-  }
+  },
+  starOn: 'fist.png'
   });
-
 </script>
