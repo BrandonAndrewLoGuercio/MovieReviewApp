@@ -2,8 +2,8 @@
   <div class="panel-body">
 
     <div class="star-rating"  data-score= <%= @avg_review %>
-    <p><%= "#{@reviews.length} reviews" %><em> (avg score)</em></p>
-
+    <p><%= "#{@reviews.length} reviews (avg. score)"%></p>
+    </div>
     <div class="row">
       <div class="col-md-4">
         <%= image_tag @movie.image.url(:medium)%>
@@ -49,7 +49,7 @@
            <% else %>
            <% @reviews.each do |review| %>
              <div class="reviews">
-               by <%= review.user.email %>
+               by: <%= review.user.email %>
                <div class="star-rating" data-score= <%=review.rating %>
                <p> <%= review.comment %> </p>
               </div>
@@ -63,7 +63,7 @@
            </div>
      </div>
     </div>
-</div>
+
 </div>
 </div>
 <script>
