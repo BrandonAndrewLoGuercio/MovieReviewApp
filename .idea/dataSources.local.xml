@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="Rails movie_review: development" uuid="d85dfd66-0eb9-456a-a898-be2393513c0f">
+      <user-name>brandon</user-name>
+      <schema-pattern>movie_review_development.pg_catalog movie_review_development.public</schema-pattern>
+      <default-schemas>movie_review_development.pg_catalog movie_review_development.public</default-schemas>
+    </data-source>
+  </component>
+</project>
