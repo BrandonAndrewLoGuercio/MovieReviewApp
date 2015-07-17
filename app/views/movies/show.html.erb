@@ -57,22 +57,23 @@
              <% end %>
        </div>
     </div>
-  </div>
+      <b></b>
+      <%= link_to 'Edit Movie', edit_movie_path(@movie) %> |
+      <%= link_to 'Back to Movies', movies_path %>
+    </div>
 </div>
 
 
-<%= link_to 'Edit Movie', edit_movie_path(@movie) %> |
-<%= link_to 'Back to Movies', movies_path %>
 
 <script>
 
 $('.star-rating').raty({
   number: 10,
-  path: '/assets/',
+  path: '/',
   readOnly: true,
   score: function() {
     return $(this).attr('data-score');
   },
-  starOn: 'fist.png'
+  starOn: 'star-on.png'
   });
 </script>
