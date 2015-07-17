@@ -1,7 +1,7 @@
 <div class= "panel panel-default">
   <div class="panel-body">
 
-    <div class="star-rating"  data-score= <%= @avg_review %> <div> </div> </div>
+    <div class="star-rating"  data-score= <%= @avg_review %>
     <p><%= "#{@reviews.length} reviews" %><em> (avg score)</em></p>
 
     <div class="row">
@@ -36,9 +36,10 @@
           </table>
           <%= link_to "Write a Review!", new_movie_review_path(@movie) %>
         </div>
-
       </div>
+
        <div class="col-md-7 col-md-offset-1">
+         <div class="container">
          <h1 class="review_title"> <%= @movie.title %> </h1>
          <p> <%= @movie.description %> </p>
 
@@ -49,25 +50,24 @@
            <% @reviews.each do |review| %>
              <div class="reviews">
                by <%= review.user.email %>
-               <div class="star-rating" data-score= <%=review.rating %></div>
+               <div class="star-rating" data-score= <%=review.rating %>
                <p> <%= review.comment %> </p>
-
+              </div>
              </div>
              <% end %>
              <% end %>
-       </div>
-    </div>
-      <b></b>
-      <%= link_to 'Edit Movie', edit_movie_path(@movie) %> |
-      <%= link_to 'Back to Movies', movies_path %>
+
+             <b></b>
+             <%= link_to 'Edit Movie', edit_movie_path(@movie) %> |
+             <%= link_to 'Back to Movies', movies_path %>
+           </div>
+     </div>
     </div>
 </div>
-
-
-
+</div>
+</div>
 <script>
-
-$('.star-rating').raty({
+ $('.star-rating').raty({
   number: 10,
   path: '/',
   readOnly: true,
