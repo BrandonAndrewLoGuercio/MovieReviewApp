@@ -32,3 +32,60 @@ h1 {
 #ptag {
   text-align: center;
 }
+
+.col-sm-4 div.info {
+  top: 0;
+  left: 0;
+  z-index: 2;
+  position: absolute;
+  font-size: 50px;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0,0,0,0);
+}
+
+.col-sm-4 div.info h2 {
+  position: relative;
+  text-align: center;
+  margin-top: 50%;
+}
+.col-sm-4 div.info h3 {
+  position: relative;
+  text-align: center;
+  margin-top: -20%;
+}
+@keyframes fadeIt {
+  0% {background-color: rgba(0,0,0,0);}
+  100% {background-color: rgba(255,255,255,0.5)}
+}
+.col-sm-4 div.info:hover {
+  animation-name: fadeIt;
+  animation-delay: 0.2s;
+  animation-duration: 0.5s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeColor {
+  0% {color: rgba(0,0,0,0);}
+  50% {color: #3f3f3f;}
+  100% {color: #000000;}
+}
+
+.col-sm-4 div.info div.info-content {
+  color: rgba(0,0,0,0);
+  z-index: 3;
+  opacity: 1;
+}
+
+.col-sm-4 div.info:hover div.info-content {
+  animation-name: fadeColor;
+  animation-delay: 0.3s;
+  animation-duration: 0.5s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+
+  color: rgba(0,0,0,0);
+  z-index: 3;
+  opacity: 1;
+}
