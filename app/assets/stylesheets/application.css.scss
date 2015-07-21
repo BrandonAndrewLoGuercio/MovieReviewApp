@@ -1,5 +1,6 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import url(http://fonts.googleapis.com/css?family=Sigmar+One);
 
 body {
   background: #c3c3c3;
@@ -19,4 +20,15 @@ body {
 .thumbnail {
   background-color: rgba(250, 250, 250, 0.42);
   border-color: transparent;
+}
+h1 {
+  text-shadow: 2px 2px #3f3f3f;
+  text-align: center;
+  color: #b74e5d !important;
+  font-size: 80px !important;
+  font-weight: 300;
+  font-family: 'Sigmar One', cursive;
+}
+#ptag {
+  text-align: center;
 }
