@@ -42,5 +42,4 @@ gem 'bootstrap-sass', '~> 3.3.4.1'
 
 gem 'pg'
 
-
 gem 'rails_12factor', group: :production
